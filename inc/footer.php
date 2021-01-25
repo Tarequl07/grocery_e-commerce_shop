@@ -5,7 +5,7 @@
 		<div class="footer-bottom container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>&copy; Copyright 2020</p>
+					<p>&copy; Copyright  Zerin & Mahi</p>
 				</div>
 				<div class="col-md-6">
 					
@@ -14,6 +14,7 @@
 		</div>
 	</footer>
 	<!-- FOOTER -->
+
 </div>
 
 

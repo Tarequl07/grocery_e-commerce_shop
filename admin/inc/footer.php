@@ -5,7 +5,7 @@
 		<div class="footer-bottom container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>&copy; Copyright 2020</p>
+					<p>&copy; Copyright © Zerin & Mahi </p>
 				</div>
 				<div class="col-md-6">
 					
@@ -38,7 +38,7 @@
 <script src="../js/jquery.bpopup.js"></script>
 <script src="../js/pikaday/pikaday.js"></script>
 <script src="../js/classie.js"></script>
-<script src="../http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="../js/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
 <script src="../js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script src="../js/jquery.prettyphoto.js"></script>

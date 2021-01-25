@@ -1,45 +1,41 @@
 <div class="menu-wrap">
-	<div id="mobnav-btn">Menu <i class="fa fa-bars"></i></div>
-	<ul class="sf-menu">
-		<li>
-			<a href="index.php">Dashboard</a>
-		</li>
-
-		<li>
-			<a href="#">Categories</a>
-			<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
-			<ul>
-				<li><a href="categories.php">View Categories</a></li>
-				<li><a href="addcategory.php">Add Category</a></li>
-			</ul>
-		</li>
-				
-		<li>
-			<a href="#">Products</a>
-			<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
-			<ul>
-				<li><a href="products.php">View Products</a></li>
-				<li><a href="addproduct.php">Add Product</a></li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="#">Orders</a>
-			<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
-			<ul>
-				<li><a href="orders.php">View Orders</a></li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="#">My Account</a>
-			<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
-			<ul>
-				<li><a href="#">Edit Profile</a></li>
-				<li><a href="logout.php">Logout</a></li>
-			</ul>
-		</li>
-	</ul>
+				<div id="mobnav-btn">Menu <i class="fa fa-bars"></i></div>
+				<ul class="sf-menu">
+					<li>
+						<a href="index.php">Dashboard</a>
+					</li>
+					<li>
+						<a href="#">Categories</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="categories.php">View Categories</a></li>
+							<li><a href="addcategory.php">Add Categories</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Products</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="products.php">View Products</a></li>
+							<li><a href="addproduct.php">Add Products</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Orders</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="orders.php">View Orders</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">My Account</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="#">Edit Profile</a></li>
+							<li><a href="logout.php">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
 				<div class="header-xtra">
 					<div class="s-cart">
 						<div class="sc-ico"><i class="fa fa-shopping-cart"></i><em>2</em></div>
@@ -52,7 +48,7 @@
 								<img src="images/shop/2.jpg" width="70" alt=""/>
 								<div class="ci-item-info">
 									<h5><a href="./single-product.html">Product fashion</a></h5>
-									<p>2 x $250.00</p>
+									<p>2 x BDT 250.00/-</p>
 									<div class="ci-edit">
 										<a href="#" class="edit fa fa-edit"></a>
 										<a href="#" class="edit fa fa-trash"></a>
@@ -63,14 +59,14 @@
 								<img src="images/shop/8.jpg" width="70" alt=""/>
 								<div class="ci-item-info">
 									<h5><a href="./single-product.html">Product fashion</a></h5>
-									<p>2 x $250.00</p>
+									<p>2 x BDT 250.00/-</p>
 									<div class="ci-edit">
 										<a href="#" class="edit fa fa-edit"></a>
 										<a href="#" class="edit fa fa-trash"></a>
 									</div>
 								</div>
 							</div>
-							<div class="ci-total">Subtotal: $750.00</div>
+							<div class="ci-total">Subtotal: BDT 750.00/- </div>
 							<div class="cart-btn">
 								<a href="#">View Bag</a>
 								<a href="#">Checkout</a>
@@ -92,4 +88,4 @@
 			</div>
 		</div>
 	</header>
-	
+    

@@ -11,8 +11,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Home Page </title>
-
+	<title>Shop Homepage</title>
 	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -53,15 +52,16 @@
 
 <div id="wrapper" class="wrapper">
 
-	<!-- HEADER -->
+<!-- HEADER -->
 	<header id="header2">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-xs-5 logo">
 					<a href="http://[::1]/cishop/admin"><img src="http://[::1]/cishop/assets/images/logo.png" class="img-responsive" alt=""/></a>
 				</div>
-					<div class="col-md-9 col-xs-7">
-						<div class="top-bar">
-							</div>
-						</div>
+				<div class="col-md-9 col-xs-7">
+					<div class="top-bar">
+						
 					</div>
+				</div>
+			</div>

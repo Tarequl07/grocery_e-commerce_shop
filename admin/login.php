@@ -1,29 +1,42 @@
 <?php 
-
+session_start();
 require_once '../config/connect.php'; 
 if(isset($_POST) & !empty($_POST)){
 	$email = mysqli_real_escape_string($connection, $_POST['email']);
 	$password = md5($_POST['password']);
-	$sql = "SELECT * FROM admin WHERE email='$email' and password='$password"
-
+	$sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+	$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
+	$count = mysqli_num_rows($result);
+	if($count == 1){
+		//echo "User exits, create session";
+		$_SESSION['email'] = $email;
+		header("location: index.php");
+	}else{
+		$fmsg = "Invalid Login Credentials";
+	}
 }
-
 ?>
-
 <!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 <head>
 
+	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Admin Login</title>
+	<title>Shop Admin login</title>
 
+	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicon.png">
 
+	<!-- CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../js/isotope/isotope.css">
@@ -37,52 +50,59 @@ if(isset($_POST) & !empty($_POST)){
 	<link rel="stylesheet" href="../css/settings-panel.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/light.css">
-	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="stylesheet" href=".//css/responsive.css">
 
+	<!-- JS Font Script -->
 	<script src="http://use.edgefonts.net/bebas-neue.js"></script>
 
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Modernizer -->
 	<script src="js/modernizr.custom.js"></script>
 
 </head>
 <body class="multi-page">
 
 <div id="wrapper" class="wrapper">
-
+	<!-- HEADER -->
 	<header id="header2">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 col-xs-5 logo">
-					<a href="http://[::1]/cishop/admin"><img src="http://[::1]/cishop/assets/images/logo.png" class="img-responsive" alt=""/></a>
+				<div class="col-md-3 col-xs-5 col-md-offset-4  logo">
+					<a href="http://localhost/ecomphp/admin"><img src="http://[::1]/cishop/assets/images/logo.png" class="img-responsive" alt=""/></a>
 				</div>
-					<div class="col-md-9 col-xs-7">
-						<div class="top-bar">
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</header>
 
-<!-- SHOP CONTENT -->
+	<!-- SHOP CONTENT -->
 	<section id="content">
 		<div class="content-blog">
 			<div class="container">
 				<div class="row">
 					<div class="page_header text-center">
-						<h2>Admin Login</h2>
-	
+						<h2>LOG IN</h2>
+						<p>Admin Login</p>
 					</div>
 					<div class="col-md-12">
 				<div class="row shop-login">
-				<div class="col-md-6 col-md-offset-3 ">
+				<div class="col-md-6 col-md-offset-3">
+				<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 					<div class="box-content">
-						<h3 class="heading text-center">Log in as an Admin</h3>
+						<!-- <h3 class="heading text-center">I'm a Returning Customer</h3> -->
 						<div class="clearfix space40"></div>
 						<form class="logregform" method="post">
 							<div class="row">
 								<div class="form-group">
 									<div class="col-md-12">
 										<label>E-mail Address</label>
-										<input type="text" name="email" value="" class="form-control">
+										<input type="email" name="email" value="" class="form-control">
 									</div>
 								</div>
 							</div>
@@ -113,20 +133,23 @@ if(isset($_POST) & !empty($_POST)){
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-</div>
-</section>
 
-<div class="clearfix space70"></div>
+
+							
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+    
+	<div class="clearfix space70"></div>
 	<!-- FOOTER -->
 	<footer id="footer2">
 		
 		<div class="footer-bottom container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>&copy; Copyright 2020</p>
+					<p>&copy; Copyright 2015. CodingCyber</p>
 				</div>
 				<div class="col-md-6">
 					
@@ -159,7 +182,7 @@ if(isset($_POST) & !empty($_POST)){
 <script src="../js/jquery.bpopup.js"></script>
 <script src="../js/pikaday/pikaday.js"></script>
 <script src="../js/classie.js"></script>
-<script src="../http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="../js/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
 <script src="../js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script src="../js/jquery.prettyphoto.js"></script>
@@ -172,4 +195,4 @@ if(isset($_POST) & !empty($_POST)){
 
 
 </body>
-</html>
+</html>  

@@ -1,7 +1,7 @@
-Admin 
+Admin
 -id
--firstname
--lastname
+-FirstName
+-LastName
 -username/email
 -password
 
@@ -9,20 +9,63 @@ Category
 -id
 -categoryname
 
-Product
--id 
--name
+Products
+-id
+-name 
 -categoryid
 -price
 -thumbnail
 -description
 
 Users
-Usersmeta
+-id
+-email
+-password
+-timestamp
+
+Users Meta
+-id
+-userid
+-firstname 
+-lastname
+-company
+-address1
+-address2
+-city
+-country
+-zip
+-mobile 
 
 Orders
+-id
+-userid
+-totalprice
+-timestamp
+-orderstatus
+-paymentmode
+
 OrderItems
+-id
+-orderid
+-productid
+-productprice
+
 OrdersTracking
+-id
+-orderid
+-status (Order Placed, In Progress, Dispatched, Delivered, Cancelled)
+-update (reason)
+-timestamp
 
 Wishlist
+-id
+-pid
+-uid
+-timestamp
 
+Reviews
+-id
+-pid 
+-uid 
+-review 
+-timestamp
