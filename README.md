@@ -1,4 +1,4 @@
-# CSE327.5_Fall20_MMA1
+# CSE499_NSU
 
 Project Name : Grocery E-commerce Shop
 
